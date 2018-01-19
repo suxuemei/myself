@@ -1,0 +1,34 @@
+$(function(){
+	$("#header").load("header.html",function(){
+		  $("#header .main").children(":not(#header-top)").hide();
+		  $("#header [data-log=Logined]").hide();
+		  console.log($("#header .left-list").children(":not(:first)").text());
+		  var name=$("#uName"),
+		  pwd=$("#uPwd"),
+		  vali=$("#vali"),
+		  autoLogin=$("#autoLogin"),
+		  loginBtn=$("#loginBtn");
+		  console.log($("#loginBtn"))
+		 loginBtn.click(function(e){
+			 console.log(111)
+			  e.preventDefault();
+			  $.ajax({
+				type:"GET",
+				url:"data/login.php",
+				data:{uname:name.val(),upwd:pwd.val()}
+			  }).then(function(data){
+				  console.log(data);
+				  if(!data){
+				     console.log("1111");
+					 return;
+				  }else if(data){
+					  $("#header [data-status=NoLogin]").hide();
+					  $("#header [data-log=Logined]").html(data);
+				    alert(data.msg+"登陆成功");
+					location.href="index.html"
+				  }
+			  })
+		  })
+	})
+  
+})

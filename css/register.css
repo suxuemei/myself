@@ -1,0 +1,60 @@
+
+#regInf{
+  position:relative;
+  width:1100px;
+  margin-top:2px;
+  min-height:600px;
+  background:url(../img/register/rigister.jpg) no-repeat center center;
+  background-size:100% 75%;
+}
+#regInf>.regMain{
+  width:500px;
+  height:365px;
+  /*position:relative;*/
+  margin:0 auto;
+  padding-top:100px;
+}
+#regInf>.regMain>.regCaption>span{
+  display:inline-block;
+  font:15px sans-serif;
+}
+#regInf>.regMain>.regCaption>span:first-child{
+  font:20px sans-serif;
+  margin-left:5px;
+  margin-right:285px;
+}
+#regInf>.regMain>.regCaption>span:last-child a{
+  color:red;
+}
+#regInf>.regMain>.regBody{
+  background-color: #eee;
+  width:500px;
+  height:340px;
+  margin:10px auto;
+  border:1px solid transparent;
+  border-radius:6px;
+}
+#regInf .regBody input{
+  outline:none;
+  border:none;
+}
+#regInf .regBody input:not(:last-child){
+   width:240px;
+   height:30px;
+   padding-left:10px;
+   margin:30px 0 20px 80px;
+}
+#regInf .regBody>.agree{
+  font:17px sans-serif;
+  margin-left:80px;
+}
+#regInf .regBody>button{
+     width:255px;
+	 height:30px;
+	 margin:10px 0 10px 75px;
+	 background-color:#ff8a81;
+	 border:1px solid transparent;
+	 border-radius:6px;
+	 color:#fff;
+	 outline:none;
+}

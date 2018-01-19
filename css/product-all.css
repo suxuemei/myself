@@ -1,0 +1,356 @@
+#header{
+  position:relative;
+  margin:2px auto;
+  width: 1100px;min-height:120px;
+/*/*  border:1px solid red;*/*/
+}
+/*#header,.fix_nav{z-index:10;position:fixed;left:150px;top:0;}*/
+/*#header #top-input span.sort-search i{*/
+/* top:-15px;left:362px;*/
+/*}*/
+#product-route{
+position:relative;
+width:1100px;
+margin:0px auto;
+min-height:30px;
+border-radius:3px;
+background-color:#ccc;
+}
+#product-route ul{
+display:flex;
+margin:0 100px;
+}
+#product-route a{
+ font:15px sans-serif;
+ color:#fff;
+ font-weight: bold;
+ line-height:30px;
+ padding:0 2px;
+}
+/**/
+#productBody{
+ position:relative;
+ margin:0 auto;
+ min-height:1000px;
+/* border:1px solid red;*/
+ width:1100px;
+ margin:-5px auto;
+}
+#productBody>.ringsHeader{
+/*  border:1px solid teal;*/
+  width:1100px;
+  height:200px;
+  margin:5px auto;
+  box-sizing:border-box;
+  background-color:#f6efef;
+}
+#productBody>.ringsHeader>ul{
+  width:900px;
+  box-sizing:border-box;
+  margin:5px auto;
+  padding:15px 50px;
+  overflow:hidden;
+}
+#productBody>.ringsHeader:before{
+   content:"";
+   display:table;
+}
+#productBody>.ringsHeader>ul:first-child{
+  list-style:none;
+  margin-top:10px;
+  height:160px;
+  background:#fff;
+}
+#productBody>.ringsHeader>ul:last-child{
+  display:flex;
+  padding:0 50px;
+  margin-left:260px;
+  font:15px  sans-serif;
+  transition:all .5s;
+}
+#productBody>.ringsHeader>ul:last-child>li{
+ width: 120px;height:20px;
+ background-color: #fff;
+ text-align: center;
+ margin-right:20px;
+ border-radius:3px;
+ transition:all .5s;
+}
+#productBody>.ringsHeader>ul:last-child>li:hover{
+ font:16px sans-serif;font-weight: bold;color:red;cursor:pointer;
+}
+#productBody>.ringsHeader>ul:last-child>li:first-child{
+ font-weight: bold;
+ background:none;
+}
+#productBody>.ringsHeader>ul:last-child>li:last-child{
+ background:none;
+ color:pink;
+}
+#productBody>.ringsHeader>ul:first-child>li>ul{
+ display:flex;
+}
+#productBody>.ringsHeader>ul:first-child>li>ul>li{
+  width:120px;height:40px;
+  color:#aaa;
+  overflow:hidden;
+  line-height:40px;
+  text-align: center;
+/*  border:1px solid red;*/
+  font:15px sans-serif;
+  color:#000;
+  box-sizing:border-box;
+  padding-top:5px;
+  transition:all .5s;
+}
+#productBody>.ringsHeader>ul:first-child>li>ul>li:first-child{
+   font-weight: bold;
+   text-align:left;
+}
+#productBody>.ringsHeader>ul:first-child>li>ul>li:not(:first-child){
+   color:#ccc;
+   text-align:left;
+}
+#productBody>.ringsHeader>ul:first-child>li>ul>li:not(:first-child):hover{
+   color:red;font:16px sans-serif;font-weight: bold;cursor:pointer;
+}
+
+#productBody>.ringsBody{
+  position:relative;
+  width:1100px;
+  min-height:820px;
+  margin:5px auto;
+  border:1px solid pink;
+  }
+/**********************/
+#productBody>.ringsBody>.extra{
+  position:absolute;
+  left:0;
+  width:248px;
+  min-height:600px;
+  border:1px dotted purple;
+  border-radius:3px;
+  box-shadow:3px 3px 1px pink;
+  margin:5px;
+  padding-bottom:8px;
+}
+#productBody>.ringsBody>.extra>p{
+  width:240px;height:50px;
+  margin:5px 5px;
+  border:1px solid #ccc;
+  box-shadow:2px 2px 3px pink;
+  font:20px sans-serif;
+  background-color:pink;
+  color:red;
+  border-radius:6px;
+  font-weight: bold;
+  padding:5px 10px;
+  line-height: 30px;
+  box-sizing:border-box;
+  transition:all 1s;
+}
+#productBody>.ringsBody>.extra:hover #productBody>.ringsBody>.extra>p{
+   margin:5px 15px;
+}
+#productBody>.ringsBody>.extra>b{
+  width:240px; height:30px;
+  display:block;
+  line-height: 30px;
+  color:red;
+  margin:0 auto;
+  padding:0 70px;
+}
+#productBody>.ringsBody>.extra>.accordion{
+  width:215px;min-height:180px;border:1px dotted red;
+  border-radius:5px;
+  margin-left:15px;padding-top:8px;
+}
+#productBody>.ringsBody>.extra>.accordion span{
+  color:lightblue;font:15px sans-serif;margin:0 5px;
+}
+#productBody>.ringsBody>.extra>.accordion span>b{
+  color:pink;font:18px sans-serif;font-weight:bold;
+}
+#productBody>.ringsBody>.extra img{
+ width: 150px;height: 150px;border-radius:5px;
+ display:block;border-radius:5px;padding:5px 30px;
+}
+/**************/
+#productBody>.ringsBody>.rings{
+  position:relative;
+  left:265px;
+  width:800px;
+  min-height:800px;
+  right:10px;
+  border:1px dotted purple;
+  border-radius:3px;
+  box-shadow:3px 3px 1px pink;
+  margin:5px;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+#productBody>.ringsBody>.rings ul{
+ width:800px;
+ display:flex;
+ overflow:hidden;
+ flex-wrap:wrap;
+ justify-content:left;
+ padding-right:0;
+ margin-top:10px;
+}
+#productBody>.ringsBody>.rings ul img{
+  width:200px;height:200px;
+/*  border:1px solid red;*/
+  position:absolute;
+  top:0;
+  transition:all 2s;
+}
+#productBody>.ringsBody>.rings li{
+position:relative;
+ width:243px;height:330px;
+ border:1px dotted pink;
+ border-radius:5px;
+ overflow:hidden;
+ margin:30px 4px;
+ box-sizing:border-box;
+}
+#productBody>.ringsBody>.rings li>span{
+  position:absolute;
+  display:inline-block;
+/*  border:1px solid green;*/
+}
+#productBody>.ringsBody>.rings li>span:first-child{
+  width: 200px;height: 200px;
+/*  border:1px dotted red;*/
+  margin:20px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:2px 3px 3px pink;
+}
+/*#productBody>.ringsBody>.rings li:nth-child(2n+1):hover img{
+  transform:rotateZ(60deg);
+    transform:skewY(-20deg);
+}*/
+#productBody>.ringsBody>.rings li:hover img{
+  transform:scale(1.1);
+  /*transform:rotateZ(60deg);*/
+}
+#productBody>.ringsBody>.rings li>span:nth-child(2){
+ width:240px;
+ height:60px;
+ bottom:40px;
+ text-align: center;
+ box-sizing:border-box;
+ padding:5px 10px;
+ font:10px sans-serif;
+ font-weight:bold;
+ line-height: 20px;
+ vertical-align:center;
+}
+#productBody>.ringsBody>.rings li>span:nth-child(3){
+ width:240px;
+ height: 25px;
+ bottom:15px;
+ line-height:30px;
+ font:16px sans-serif;
+ color:red;
+ font-weight:bold;
+ padding-left:10px;
+ box-sizing:border-box;
+}
+#productBody>.ringsBody>.rings li>span:nth-child(3)>b{
+   text-align: left;
+   position:absolute;
+   left:30px;
+}
+#productBody>.ringsBody>.rings li>span:nth-child(3)>a{
+  display:inline-block;
+  width:80px;
+  height: 20px;
+  background:#e37f7f;
+  border:1px dotted pink;
+  border-radius:5px;
+  font:12px sans-serif;
+  box-sizing:border-box;
+  position:absolute;
+  text-align: center;
+  right:20px;
+  bottom:2px;
+}
+#productBody>.ringsBody>.rings li>span:last-child{
+  position:absolute;
+  bottom:0;
+  color:#aaa;
+  padding-left:10px;
+}
+#productBody>.ringsBody>.pages{
+ position:relative;
+ left:280px;
+ padding-top:6px;
+ width:1028px; height:40px;
+ box-sizing:border-box;
+}
+#productBody>.ringsBody>.pages>span{
+  min-width:30px;height:30px;display:inline-block;padding:0 8px;
+  background:linear-gradient(to bottom,#eee,#ccc);
+  color:gray;text-align: center;
+  margin-right:5px;
+  font-size:15px;
+  box-sizing:border-box;overflow:hidden;
+  line-height: 30px;border-radius:5px;
+  cursor:pointer;
+}
+.rings>ul>.carts{
+    color:blue;
+	position:relative;
+	left:-25px;
+	top:-66px;
+	overflow:hidden;
+	/*display:inline-block;*/
+	width:15px;
+	height:15px;
+	border-radius:15px;
+	text-align:center;
+	line-height:15px;
+	z-index:20;
+	background-color:lightblue;
+}
+#productBody>.ringsBody>.pages>span.active{background:blue;}
+.cartPic{
+ position:fixed;
+ display:inline-block;
+ right:60px;
+ top:200px;
+ width:60px;
+ height:60px;
+ z-index:50;
+ /*background-color:red;*/
+ box-shadow:2px 3px 3px #ccc;
+}
+.cartPic>img{
+ width:60px;
+ height:60px;
+ border-radius:20px;
+}
+.toCart{
+  width:20px;
+  height:20px;
+  border-radius:20px;
+  color:#fff;
+  font-size:13px;
+  font-weight:bold;
+  text-align:center;
+  line-height:20px;
+  background-color:teal;
+  position:fixed;
+  top:40px;
+  right:80px;
+  display:none;
+}
+/**/
+#footer{
+  position:relative;
+  margin:0px auto;
+  width: 1100px;min-height:120px;
+/*  border:1px solid red;*/
+}

@@ -1,0 +1,18 @@
+<?php
+require_once("init.php");
+session_start();
+@$uid=$_SESSION["uid"];
+if($uid){
+	$sql="SELECT uname FROM azx_user WHERE uid=$uid";
+	$result=mysqli_query($conn,$sql);
+	$row=mysqli_fetch_row($result);
+	
+	if($row){
+		//$msg = ['code'=>1,'msg'=>"登录成功"];
+	  echo json_encode(["code"=>1,"msg"=>$row[0]]);
+	}else{
+	  echo '{"code":-1,"msg":"登录失败"}';
+		//$msg = ['code'=>-1,'msg'=>"登录失败"];
+	}
+	//echo JSON_encode($msg);
+}

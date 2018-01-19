@@ -1,0 +1,138 @@
+#main{
+position:relative;
+width:1100px;
+margin:0 auto;
+background:url(../img/header/background.jpg) no-repeat; 
+}
+#header-top{
+  margin-top:10px;
+  height:30px;
+  background:linear-gradient(to bottom,#e6d6d4,#f8e3df);
+}
+#header-top a{
+  font:16px sans-serif;
+}
+#header-top>#header-top-left{position:absolute;left:180px;}
+ul.left-list>li,ul.right-list>li{
+  float:left;
+  margin-right:20px;
+  line-height: 30px;
+  font-size:18px;
+}
+#header-top>#header-top-right{
+position:absolute;
+right:20px;
+}
+#loginDetails{
+ position:absolute;
+ top:20px;
+ margin-top:10px;
+ min-height:580px;
+ width:100%;
+ background:url(../img/login/login.jpg) no-repeat;
+ /*background-size:cover;*/
+}
+#formDetails{
+  position:relative;
+  left:63%;
+  top:50px;
+  width:410px;
+  min-height:400px;
+  background-color: #faeada;
+  border:1px dotted #eee;
+  opacity:1;
+  border-radius:8px;
+  text-align: center;
+}
+#formCaption,#formBody{
+ margin-left:60px;
+}
+#formDetails>#formCaption{
+  margin:10px 0 0 55px;
+  width:300px;
+  height:25px;
+}
+#formDetails>#formCaption>a{
+   display:inline-block;
+}
+#formDetails>#formCaption>a:first-child{
+   font:15px sans-serif;
+   margin:3px 180px 0 0;
+}
+#formDetails>#formCaption>a:last-child{
+   font:8px sans-serif;
+   margin:6px 5px 0 0;
+}
+#formDetails>#formCaption>a:hover a{
+   color:lightblue;
+}
+#formDetails>#formBody{
+  margin-top:45px;
+  width: 300px;
+  height:200px;
+}
+#formDetails>#formBody>div:nth-child(4){
+  margin-left:-230px;
+}
+#formDetails>#formBody .cheBox{
+margin:5px 0;
+padding-left:210px;
+}
+#formDetails>#formBody .cheBox>span{
+display:inline-block;
+margin-right:150px;
+}
+#formDetails>#formBody>a{
+display:inline-block;
+margin:0px 10px 10px 230px;
+}
+#formDetails #checkBox>input{width:10px;}
+#formDetails button{
+ width:300px;
+ height:30px;
+ background-color:red;
+ border:1px solid transparent;
+ border-radius:6px;
+}
+#recommandLogin{
+  margin-top:35px;
+  width:300px;
+  height:50px;
+}
+#recommandLogin>#ta{
+   height:10px;
+   width:300px;
+   line-height:10px;
+   text-align: center;
+}
+#recommandLogin b{
+  display:inline-block;
+  width:50px;
+  border:1px solid #fff;
+}
+#recommandLogin b:first-child{
+margin-right:35px;
+}
+#recommandLogin b:last-child{
+ margin-left:50px;
+}
+#recommandLogin>#Imgs{
+  margin-top:50px;
+  width:300px;
+  height:50px;
+  display:flex;
+}
+#recommandLogin>#Imgs img{
+  display:inline-block;
+  padding:0 50px;
+  width:36px;
+  height:26px;
+  transition:all 1.5s;
+}
+#recommandLogin>#Imgs img:hover{
+     transform:scale(1.2);
+}
+#formDetails input{
+outline:none;
+width:300px;
+}

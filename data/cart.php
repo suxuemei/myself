@@ -1,0 +1,26 @@
+<?php
+    require_once("init.php");
+	session_start();
+	@$uid=$_SESSION["uid"];
+	@$lid=$_REQUEST["lid"];
+	@$count=$_REQUEST["count"];
+	if($uid){
+		$sql="select * from azx_shoppingcart where uid=$uid and lid=$lid";
+		$result=mysqli_query($conn,$sql);
+		//如果$uid的购物车中有$product_id商品
+		if(count(mysqli_fetch_all($result,1))){
+			$sql="update azx_shoppingcart set count=count+$count where uid=$uid and lid=$lid";
+            mysqli_query($conn,$sql);
+		}else{//否则
+			$sql="insert into azx_shoppingcart(uid,lid,count,is_checked) values ($uid,$lid,$count,0)";
+			$result=mysqli_query($conn,$sql);
+			$row=mysqli_affected_rows($conn);
+			//echo json_encode($row);
+			if($row){
+			  echo json_encode(["code"=>1,"msg"=>"sucee"]);
+			}
+		}
+		
+	}else{
+	  echo json_encode(["code"=>-1,"msg"=>"err"]);
+	}

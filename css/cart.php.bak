@@ -1,0 +1,18 @@
+function addToCart(){
+<?php
+    require_once("init.php");
+	session_start();
+	@$uid=$_SESSION["uid"];
+	@$product_id=$_REQUEST["lid"];
+	@$count=$_REQUEST["count"];
+	if($uid){
+		$sql="select * from xz_shoppingcart_item where user_id=$uid and product_id=$product_id";
+		$result=mysqli_query($conn,$sql);
+		//如果$uid的购物车中有$product_id商品
+		if(count(mysqli_fetch_all($result,1)))
+			$sql="update azx_shoppingcart set count=count+$count where user_id=$uid and product_id=$product_id";
+		else//否则
+			$sql="insert into azx_shoppingcart(user_id,product_id,count,is_checked) values ($uid,$product_id,$count,0)";
+		mysqli_query($conn,$sql);
+	}
+}

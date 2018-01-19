@@ -1,0 +1,42 @@
+<?php
+require_once("init.php");
+@$pageSize=$_REQUEST["pageSize"];
+@$pno=$_REQUEST["pno"];
+@$num=$_REQUEST["num"];
+$output=[];
+if(!$pageSize) $pageSize=8;
+if(!$pno) $pno=0;
+$output["pageSize"]=$pageSize;
+$output["pno"]=$pno;
+$sql="SELECT cid,img,title,cprice,evaluate FROM azx_laptop_all";
+if($output["pno"])
+$sql.=" LIMIT ".($output["pno"]-1)*$output["pageSize"].",".$output["pageSize"];
+$reslut=mysqli_query($conn,$sql);
+$all=mysqli_fetch_all($reslut,MYSQLI_ASSOC);
+$output["all"]=$all;
+$sql="SELECT cid,img,title,cprice,evaluate FROM azx_laptop_all WHERE pid=2";
+if($output["pno"])
+$sql.=" LIMIT ".($output["pno"]-1)*$output["pageSize"].",".$output["pageSize"];
+$reslut=mysqli_query($conn,$sql);
+$all=mysqli_fetch_all($reslut,MYSQLI_ASSOC);
+$output["diamond"]=$all;
+$sql="SELECT cid,img,title,cprice,evaluate FROM azx_laptop_all WHERE pid=3";
+if($output["pno"])
+$sql.=" LIMIT ".($output["pno"]-1)*$output["pageSize"].",".$output["pageSize"];
+$reslut=mysqli_query($conn,$sql);
+$all=mysqli_fetch_all($reslut,MYSQLI_ASSOC);
+$output["coupleRing"]=$all;
+$sql="SELECT cid,img,title,cprice,evaluate FROM azx_laptop_all WHERE pid=4";
+if($output["pno"])
+$sql.=" LIMIT ".($output["pno"]-1)*$output["pageSize"].",".$output["pageSize"];
+$reslut=mysqli_query($conn,$sql);
+$all=mysqli_fetch_all($reslut,MYSQLI_ASSOC);
+$output["ACC"]=$all;
+if($num==1)
+  echo json_encode($output["all"]);
+if($num==2)
+echo json_encode($output["diamond"]);
+if($num==3)
+echo json_encode($output["coupleRing"]);
+if($num==4)
+echo json_encode($output["ACC"]);

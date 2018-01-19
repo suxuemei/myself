@@ -1,0 +1,34 @@
+$(()=>{
+       var regName="/$[0-9]{6}/d+/";
+		$("#uName").blur(function(){		
+			$.ajax({
+				type:"GET",
+				url:"data/register.php",
+				data:{uname:$(this).val()}
+				 }).then(data=>{
+					 if(data.code==1){
+					   $(this).next().html(data.msg).css({color:"red"});
+                     }else{
+					   $(this).next().html(data.msg).css({color:"blue"});
+					 }
+					 console.log(data);
+		         })
+			});
+			$("#upwd").blur(function(){
+			  var n=regName.test($(this).val());
+			  console.log(n);
+			})
+   $("#btnSubmit").click(function(e){
+	   e.preventDefault();	   
+	   $.ajax({
+		 type:"GET",
+		 url:"data/register.php",
+		 data:{uname:$("#uName").val(),upwd:$("#uPwd").val()}
+	   }).then(data=>{
+		   if(data.code==1){
+		     alert(data.msg);
+			 location.href="login.html";
+		   }else{return;}
+	   })
+  }) 
+})
